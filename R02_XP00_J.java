@@ -18,7 +18,8 @@ public class R02_XP00_J
 		}
 	}
 	
-    public static void main(String[] args) {
+ 	public static void main(String[] args) 
+   	{
 		
 		//Do Something
 	}
