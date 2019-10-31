@@ -3,42 +3,35 @@
  Non-Compliant Code
  ******************************************************************************/
 
-public class R13_FI003_J
+class TempFile 
 {
-	public static void main(String[] args) throws IOException
+	
+	public static void main(String[] args) 
 	{
-		File f = new File("tempnam.tmp");
-		
-		if (f.exists()) 
+    		Path tempFile = null;
+    		try
 		{
-			System.out.println("This file already exists");
-			return;
-		}
- 
-		FileOutputStream fop = null;
-		
-		try 
+      			tempFile = Files.createTempFile("tempnam", ".tmp");
+      			try (BufferedWriter writer =
+          			Files.newBufferedWriter(tempFile, Charset.forName("UTF8"),
+                                  StandardOpenOption.DELETE_ON_CLOSE)) 
+			{
+       				 // Write to file
+      			}
+      
+			System.out.println("Temporary file write done, file erased");
+   		 } 
+	
+		catch (FileAlreadyExistsException x)
 		{
-			fop = new FileOutputStream(f);
-			String str = "Data";
-			fop.write(str.getBytes());
+      			System.err.println("File exists: " + tempFile);
+   
 		} 
 		
-		finally 
+		catch (IOException x) 
 		{
-			if (fop != null) 
-			{
-				try 
-				{
-					fop.close();
-				}	 
-				
-				catch (IOException x) 
-				{
-					// Handle error
-				}
-			}
-		}
-	}
-
+      			// Some other sort of failure, such as permissions.
+      			System.err.println("Error creating temporary file: " + x);
+    		}
+  	}
 }
