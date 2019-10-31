@@ -15,7 +15,8 @@ public class R02_XP00_J
 		someFile.delete();
 	}
 	
-    public static void main(String[] args) {
+    	public static void main(String[] args)
+    	{
 		
 		//Do Something
 	}
