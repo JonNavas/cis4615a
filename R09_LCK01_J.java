@@ -7,7 +7,7 @@ public class R09_LCK01_J
 {
 
 	private int count = 0;
-	private final Integer Lock = count; // Boxed primitive Lock is shared
+	private final Integer Lock = new Integer(count); // Boxed primitive Lock is shared
  
 	public void doSomething() 
 	{
