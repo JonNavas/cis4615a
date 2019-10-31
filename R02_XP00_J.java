@@ -12,7 +12,10 @@ public class R02_XP00_J
 		
 		// Do something with someFile
 		
-		someFile.delete();
+		if (!someFile.delete()) 
+		{
+			// Handle failure to delete the file
+		}
 	}
 	
     public static void main(String[] args) {
