@@ -5,6 +5,7 @@
 
 public class R00_IDS03_J 
 {
+	
 	public static int getAbsAdd(int x, int y) 
 	{
   		if (x == Integer.MIN_VALUE || y == Integer.MIN_VALUE) 
@@ -27,4 +28,5 @@ public class R00_IDS03_J
     	{
 		//Do Something
 	}
+	
 }
