@@ -1,5 +1,8 @@
 /******************************************************************************
  IDS03-J Do not log unsanitized user input
+ Compilation: javac R00_IDS3_J.java
+ Execution:   java R00_IDS03_J
+ 
  Non-Compliant Code
  ******************************************************************************/
 
@@ -13,6 +16,7 @@ public class R00_IDS03_J
 	
     	public static void main(String[] args) 
 	{
+		boolean loginSuccesful = true;
         
 		if (loginSuccessful) 
 			{
