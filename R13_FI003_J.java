@@ -2,7 +2,7 @@
  FIO03-J. Remove temporary files before termination
  Compilation: javac R13_FI003_J.java
  Execution:   java R13_FI003_J
- Non-Compliant Code
+ Compliant Code
  ******************************************************************************/
 import java.nio.file;
 import java.io.BufferedWriter;
