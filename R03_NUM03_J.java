@@ -11,9 +11,9 @@ public class R03_NUM03_J
 		return is.readInt() & 0xFFFFFFFFL; 
 	}
 	
-    public static void main(String[] args) 
-	{
-        //Do Something
-    }
+   	 public static void main(String[] args) 
+ 	{
+        	//Do Something
+    	}
 
 }
