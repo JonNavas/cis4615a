@@ -2,7 +2,7 @@
  LCK01-J. Do not synchronize on objects that may be reused
  Compilation: javac R09_LCK01_J.java
  Execution:   java R09_LCK01_J
- Non-Compliant Code
+ Compliant Code
  ******************************************************************************/
 import java.lang.Integer;
 import java.io.*; 
