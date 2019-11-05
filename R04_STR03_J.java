@@ -2,7 +2,7 @@
  STR03-J. Do not encode noncharacter data as a string
  Compilation: javac R04_STR03_J.java
  Execution:   java R004_STR03_J
- Non-Compliant Code
+ Compliant Code
  ******************************************************************************/
 import java.math.BigInteger;
 import java.io.*;
