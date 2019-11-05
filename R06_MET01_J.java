@@ -2,7 +2,7 @@
  MET01-J. Never use assertions to validate method arguments
  Compilation: javac R06_MET01_J.java
  Execution:   java R06_MET01_J
- Non-Compliant Code
+ Compliant Code
  ******************************************************************************/
 import java.lang.Math;
 import java.lang.Integer;
