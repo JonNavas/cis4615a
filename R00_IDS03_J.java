@@ -3,7 +3,7 @@
  Compilation: javac R00_IDS3_J.java
  Execution:   java R00_IDS03_J
  
- Non-Compliant Code
+ Compliant Code
  ******************************************************************************/
 
 public class R00_IDS03_J 
