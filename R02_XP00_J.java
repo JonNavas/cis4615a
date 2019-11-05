@@ -1,5 +1,7 @@
 /******************************************************************************
  EXP00-J. Do not ignore values returned by methods
+ Compilation: javac R02_XP00_J.java
+ Execution:   java R02_CP00_J
  Non-Compliant Code
  ******************************************************************************/
 
@@ -20,8 +22,7 @@ public class R02_XP00_J
 	
  	public static void main(String[] args) 
    	{
-		
-		//Do Something
+		deleteFile();
 	}
 
 }
