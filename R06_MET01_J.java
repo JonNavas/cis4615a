@@ -1,9 +1,13 @@
 /******************************************************************************
  MET01-J. Never use assertions to validate method arguments
+ Compilation: javac R06_MET01_J.java
+ Execution:   java R06_MET01_J
  Non-Compliant Code
  ******************************************************************************/
+import java.lang.Math;
+import java.lang.Integer;
 
-public class R00_IDS03_J 
+public class R06_MET01_J 
 {
 	
 	public static int getAbsAdd(int x, int y) 
