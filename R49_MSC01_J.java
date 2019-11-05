@@ -1,6 +1,8 @@
 /******************************************************************************
  MSC01-J. Do not use an empty infinite loop
- Non-Compliant Code
+ Compilation: javac R49_MSC01_J.java
+ Execution:   java R49_MSC01_J
+ Compliant Code
  ******************************************************************************/
 
 class Stuff 
