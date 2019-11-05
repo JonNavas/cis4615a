@@ -1,7 +1,12 @@
 /******************************************************************************
  LCK01-J. Do not synchronize on objects that may be reused
+ Compilation: javac R09_LCK01_J.java
+ Execution:   java R09_LCK01_J
  Non-Compliant Code
  ******************************************************************************/
+import java.lang.Integer;
+import java.io.*; 
+import java.util.*; 
 
 public class R09_LCK01_J
 {
@@ -11,16 +16,16 @@ public class R09_LCK01_J
  
 	public void doSomething() 
 	{
-	synchronized (Lock) 
+		synchronized (Lock) 
 		{
-		count++;
-		// ...
+			count++;
+			// ...
 		}
 	}
 	
-    public static void main(String[] args) 
+ 	public static void main(String[] args) 
 	{
-        //Do Something
-    }
+        	//Do Something
+    	}
 
 }
