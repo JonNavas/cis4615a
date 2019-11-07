@@ -4,6 +4,7 @@
  Execution:   java R02_CP00_J
  Compliant Code
  ******************************************************************************/
+import java.io.File;
 
 public class R02_XP00_J 
 {
