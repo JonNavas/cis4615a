@@ -4,6 +4,8 @@
  Execution:   java R03_NUM03_J
  Compliant Code
  ******************************************************************************/
+import java.io.DataInputStream;
+import java.io.IOException;
 
 public class R03_NUM03_J
 {	
