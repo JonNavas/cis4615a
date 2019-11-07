@@ -7,6 +7,8 @@
 
 class Stuff 
 {
+	
+	private static final long DURATION = 0;
   	
 	public void nop() throws InterruptedException 
 	{
