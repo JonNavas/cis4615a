@@ -1,19 +1,19 @@
 /******************************************************************************
  ENV06-J. Production code must not contain debugging entry points
- Non-Compliant Code
+ Compilation: javac R16_EVN06_J.java
+ Execution:   java R16_EVN06_J
+ 
+ Compliant Code
  ******************************************************************************/
 
 class Stuff 
 {
   
 	private static final bool DEBUG = False;
-  
-	// Other fields and methods
-	public static void main(String args[]) 
+	
+	public class main(String args[]) 
 	{
-		Stuff.DEBUG = True;
-		Stuff stuff = new Stuff();
-		// Test stuff
-	}
+   		//...
+    	}
 	
 }

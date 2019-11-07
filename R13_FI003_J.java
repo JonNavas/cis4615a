@@ -1,44 +1,46 @@
 /******************************************************************************
  FIO03-J. Remove temporary files before termination
- Non-Compliant Code
+ Compilation: javac R13_FI003_J.java
+ Execution:   java R13_FI003_J
+ Compliant Code
  ******************************************************************************/
+import java.nio.charset.Charset;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+import java.io.BufferedWriter;
+import java.io.IOException;
 
-public class R13_FI003_J
+class TempFile 
 {
-	public static void main(String[] args) throws IOException
+	
+	public static void main(String[] args) 
 	{
-		File f = new File("tempnam.tmp");
-		
-		if (f.exists()) 
+    		Path tempFile = null;
+    		try
 		{
-			System.out.println("This file already exists");
-			return;
-		}
- 
-		FileOutputStream fop = null;
-		
-		try 
+      			tempFile = Files.createTempFile("tempnam", ".tmp");
+      			try (BufferedWriter writer =
+          			Files.newBufferedWriter(tempFile, Charset.forName("UTF8"),
+                                  StandardOpenOption.DELETE_ON_CLOSE)) 
+			{
+       				 // Write to file
+      			}
+      
+			System.out.println("Temporary file write done, file erased");
+   		 } 
+	
+		catch (FileAlreadyExistsException x)
 		{
-			fop = new FileOutputStream(f);
-			String str = "Data";
-			fop.write(str.getBytes());
+      			System.err.println("File exists: " + tempFile);
+   
 		} 
 		
-		finally 
+		catch (IOException x) 
 		{
-			if (fop != null) 
-			{
-				try 
-				{
-					fop.close();
-				}	 
-				
-				catch (IOException x) 
-				{
-					// Handle error
-				}
-			}
-		}
-	}
-
+      			// Some other sort of failure, such as permissions.
+      			System.err.println("Error creating temporary file: " + x);
+    		}
+  	}
 }
