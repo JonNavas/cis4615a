@@ -21,9 +21,16 @@ public class R02_XP00_J
 		}
 	}
 	
+Compliant-Code
  	public static void main(String[] args) 
    	{
 		deleteFile();
+=======
+    	public static void main(String[] args)
+    	{
+		
+		//Do Something
+master
 	}
 
 }
